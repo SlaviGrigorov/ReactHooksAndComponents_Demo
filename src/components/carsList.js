@@ -1,14 +1,7 @@
+import { Car } from './CarComponent';
 
 export const CarList = (props) => {
-    let carsList = props.cars.map(car => {
-        return(
-            <li>
-                <h2>{car.brand}</h2>
-                <div>Model: {car.model}</div>
-                <div>Year: {car.year}</div>
-            </li>
-        )
-    })
+    let carsList = props.cars.map(car => <Car {...car}/>)
 
     return (
         <ul>
