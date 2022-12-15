@@ -1,25 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import { CarList } from './components/carsList';
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    let cars = [
+        {"brand": "Nissan", "model": "R34", "year": "2002"},
+        {"brand": "Audi", "model": "RS6", "year": "2011"},
+        {"brand": "Mitsubishi", "model": "Lancer Evolution IX", "year": "2010"},
+    ]
+
+    return (
+        <div className="App">
+            <header className="App-header">
+                <CarList cars={cars} />
+            </header>
+        </div>
+    );
 }
 
 export default App;
