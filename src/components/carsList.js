@@ -10,3 +10,5 @@ export const CarList = (props) => {
         </ul>
     );
 }
+
+// Commented sections are one way to do it, not commented is shorter way!
